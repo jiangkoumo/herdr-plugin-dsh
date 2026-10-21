@@ -1,0 +1,20 @@
+id = "dsh-tui"
+name = "dsh-tui"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Start dsh-tui in a sibling Herdr pane. dsh-tui reports its own idle/working/blocked state, so the pane shows up as an agent immediately."
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "start"
+title = "Start dsh-tui"
+description = "Open a pane at the focused pane's directory and launch dsh-tui"
+contexts = ["pane", "tab", "workspace"]
+command = ["sh", "launch.sh", "new"]
+
+[[actions]]
+id = "resume"
+title = "Resume dsh-tui session"
+description = "Open a pane at the focused pane's directory and resume the last dsh-tui session there"
+contexts = ["pane", "tab", "workspace"]
+command = ["sh", "launch.sh", "resume"]
