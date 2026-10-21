@@ -1,7 +1,10 @@
 # herdr-plugin-dsh
 
-给 [Herdr](https://herdr.dev) 用的 dsh-tui 扩展：一键在旁边的 pane 里拉起
-`dsh-tui`，并按当前 pane 的目录启动。
+给 [Herdr](https://herdr.dev) 用的 [dsh-tui](https://github.com/ccch1mneyyy/dsh-TUI)
+扩展：一键在旁边的 pane 里拉起 `dsh-tui`，并按当前 pane 的目录启动。
+
+> 已打 `herdr-plugin` topic，会被 [Herdr marketplace](https://herdr.dev/plugins/)
+> 索引（约 30 分钟刷新一次）。
 
 ## 它做什么
 
@@ -14,6 +17,14 @@ dsh-tui 自己会调 `herdr pane report-agent`，所以 pane 一开出来，Herd
 也都能直接对它用。插件本身不碰状态上报。
 
 ## 安装
+
+从 GitHub 装（推荐，之后能 `herdr plugin update`）：
+
+```sh
+herdr plugin install jiangkoumo/herdr-plugin-dsh
+```
+
+从本地目录 link（开发时用）：
 
 ```sh
 herdr plugin link /path/to/herdr-plugin-dsh
